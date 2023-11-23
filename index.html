@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="./css/login.css">
+    <!--Link Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Título da Página -->
+    <title>Gear Up Ir | Registro e Monitoramento de Mochilas de Emergência</title>
+    <!-- Meta Descrição -->
+    <meta name="description" content="Registre suas mochilas de emergência e mantenha-se preparado para qualquer situação com Gear Up Ir. Monitoramento fácil e seguro.">
+    <!-- Meta Palavras-Chave -->
+    <meta name="keywords" content="Mochilas de Emergência, Registro de Mochilas, Monitoramento de Preparação, Kit de Sobrevivência, Preparação para Emergências, Equipamento de Segurança">
+    <!--Link JS-->
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <section class="container-intro">
+        <div class="intro">
+            <h1>Emergência.</h1>
+            <h1>Preparação.</h1>
+            <h1><span>Segurança.</span></h1>
+            <p>"Segurança em suas mãos."</p>
+        </div>
+    </section>
+
+    <!--Tela de Login de Usuarios-->
+    <section class="container_login" id="container_login">
+        <form action="autenticar.php" method="post">
+            <div id="login_txt">
+                <h2>Login</h2>
+            </div>
+            <input class="input_login" type="email" name="email" placeholder="E-mail" required><br>
+
+            <input class="input_login" type="password" name="senha" placeholder="Senha" required><br>
+
+            <input id="btn_login" type="submit" value="Login">
+
+            <a href="#" id="register_link" onclick="hide()">Não tenho cadastro</a>
+
+            <div class="social_mob">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </form>
+    </section>
+
+    <!--Tela de Registro de Usuarios-->
+    <section class="container_register" id="container_register">
+        <form action="registrar.php" method="post">
+            <div id="login_txt">
+                <h2>Registro de Usuario</h2>
+            </div>
+    
+            <input class="input_register" type="text" name="nome" placeholder="Nome" required><br>
+            
+            <input class="input_register"  type="email" name="email" placeholder="Email" required><br>
+            
+            <input class="input_register" id="password" type="password" name="senha" placeholder="Senha" required><br>
+    
+            <input class="input_register" id="confirm_password" type="password" name="confirmar_senha" placeholder="Confirmar Senha" required><br>
+            
+            <input id="btn_register" type="submit" value="Registrar" onclick="">
+
+            <a href="#" id="register_link" onclick="hideRegister()">Já tenho cadastro</a>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define o conjunto de caracteres UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Define a escala inicial e largura da visualização da página para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link para o arquivo CSS externo 'itens.css' -->
+    <link rel="stylesheet" href="./css/itens.css">
+
+    <!-- Link para a biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Título da página exibido na barra de título do navegador -->
+    <title>Gear Up Ir | Registro e Monitoramento de Mochilas de Emergência</title>
+
+    <!-- Meta descrição para motores de busca e redes sociais -->
+    <meta name="description"
+        content="Registre suas mochilas de emergência e mantenha-se preparado para qualquer situação com Gear Up Ir. Monitoramento fácil e seguro.">
+
+    <!-- Meta palavras-chave para SEO -->
+    <meta name="keywords"
+        content="Mochilas de Emergência, Registro de Mochilas, Monitoramento de Preparação, Kit de Sobrevivência, Preparação para Emergências, Equipamento de Segurança">
+
+    <!-- Link para o arquivo JavaScript externo 'script.js' -->
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="user">
+                <!-- Imagem do usuário -->
+                <div class="user_img">
+                    <img src="./assets/img/user.png" alt="user_img">
+                </div>
+
+                <div class="notification">
+                    <a href="./itens_vencidos.php"><span class="material-symbols-outlined" id="notification-icon" onclick="showNotifications()">
+                        notifications
+                    </span></a>
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <section class="bag_info">
+            <div class="bag_info_img">
+
+            </div>
+
+            <div class="bag_info_txt">
+
+                <div class="info_title_bag">
+                    <h1>Mochila de Emergência: O que você precisa para estar preparado?</h1>
+                    <p>Em situações de emergência, ter uma mochila de emergência pronta pode fazer toda a diferença.
+                        Aqui estão alguns itens essenciais que você deve considerar ao montar sua mochila de emergência:
+                    </p>
+                </div>
+
+                <div class="info_txt_bag">
+                    <h2>Água e Alimentos</h2>
+                    <p><b>Água:</b> Mantenha pelo menos um galão de água por pessoa por dia, para beber e higiene.
+                        <br><b>Alimentos não perecíveis:</b> Escolha alimentos que não precisam de refrigeração, cozimento ou muita
+                        água para preparar.</p>
+                    
+                    <h2>Suprimentos Médicos</h2>
+                    <p><b>Kit de primeiros socorros:</b> Inclua curativos, antissépticos, pinças e uma tesoura.
+                        <br><b>Medicamentos essenciais:</b> Se você ou alguém da sua família toma medicamentos prescritos regularmente, certifique-se de ter um suprimento extra.</p>
+
+                    <h2>Ferramentas e Suprimentos</h2>
+                    <p><b>Canivete suíço:</b> Uma ferramenta multifuncional pode ser útil em várias situações.
+                        <br><b>Lanterna e pilhas extras:</b> Em caso de falta de energia, uma lanterna pode ser essencial.
+                        <br><b>Rádio alimentado por manivela ou bateria:</b> Para se manter informado sobre a situação.</p>
+                    
+                    <h2>Documentos Importantes</h2>
+                    <p>Mantenha cópias de documentos importantes, como identificações, passaportes, certidões de nascimento e cartões de seguro.</p>
+
+                    <h2>Itens Pessoais</h2>
+                    <p>Não se esqueça de itens pessoais, como produtos de higiene pessoal, roupas extras e cobertores.
+
+                        Lembre-se, a chave é personalizar sua mochila para atender às suas necessidades específicas. Revise e atualize seu kit regularmente para garantir que você esteja sempre preparado.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contêiner para adicionar novos itens -->
+        <div class="add-item-container" id="add-item-container">
+            <!-- Ícone para fechar o contêiner -->
+            <i class="fas fa-times" id="close-button" onclick="closeAddItens()"></i>
+            <h3>Adicionar Novo Item</h3>
+            <form action="adicionar_item.php" method="post">
+                <!-- Campos de entrada para nome do item, data de validade, quantidade e botão para adicionar -->
+                <input class="input_add" type="text" name="nome_item" required placeholder="Nome">
+                <input class="input_add" type="date" name="data_validade" placeholder="Data de Validade">
+                <input class="input_add" type="text" name="status" placeholder="Quantidade">
+                <input id="btn_add" type="submit" value="Adicionar Item">
+            </form>
+        </div>
+
+        <!-- Barra flutuante com ícones -->
+        <div class="floating-bar">
+            <!-- Ícone de "Home" com um link para a página "home.html" -->
+            <a href="./home.php"><i class="fas fa-home"></i></a>
+            <!-- Ícone de "Lista de Itens" com um link para a página "lista_itens.php" -->
+            <a href="./lista_itens.php"><i class="fa-solid fa-list"></i></a>
+            <!-- Ícone para mostrar o contêiner de adição de itens com uma função JavaScript associada "hideAddItens()" -->
+            <i class="fas fa-plus" id="add-item-button" onclick="hideAddItens()"></i>
+            <!-- Ícone de "Informações" com um link para a página "infos.html" -->
+            <a href="./infos.html"><i class="fa-solid fa-info"></i></a>
+            <!-- Ícone de "Usuário" (perfil do usuário) -->
+            <a href="./user.html"><i class="fas fa-user"></i></a>
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define o conjunto de caracteres UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Define a escala inicial e largura da visualização da página para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link para o arquivo CSS externo 'itens.css' -->
+    <link rel="stylesheet" href="./css/itens.css">
+
+    <!-- Link para a biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Título da página exibido na barra de título do navegador -->
+    <title>Gear Up Ir | Registro e Monitoramento de Mochilas de Emergência</title>
+
+    <!-- Meta descrição para motores de busca e redes sociais -->
+    <meta name="description"
+        content="Registre suas mochilas de emergência e mantenha-se preparado para qualquer situação com Gear Up Ir. Monitoramento fácil e seguro.">
+
+    <!-- Meta palavras-chave para SEO -->
+    <meta name="keywords"
+        content="Mochilas de Emergência, Registro de Mochilas, Monitoramento de Preparação, Kit de Sobrevivência, Preparação para Emergências, Equipamento de Segurança">
+
+    <!-- Link para o arquivo JavaScript externo 'script.js' -->
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="user">
+                <!-- Imagem do usuário -->
+                <div class="user_img">
+                    <img src="./assets/img/user.png" alt="user_img">
+                </div>
+
+                <div class="notification">
+                    <a href="./itens_vencidos.php"><span class="material-symbols-outlined" id="notification-icon" onclick="showNotifications()">
+                        notifications
+                    </span></a>
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <section class="bag_info">
+            <div class="contact_info_img">
+
+            </div>
+
+            <div class="bag_info_txt">
+
+                <div class="info_title_bag">
+                    <h1>Mantenha Seus Contatos Cruciais Sempre à Mão em Sua Mochila de Emergência</h1>
+                    <p>Em situações de emergência, ter acesso rápido e eficiente a contatos cruciais pode fazer a
+                        diferença entre segurança e incerteza. Ao montar sua mochila de emergência, não se esqueça de
+                        incluir uma lista de contatos essenciais para garantir que você possa se comunicar com amigos,
+                        familiares e serviços de emergência quando mais precisar.</p>
+                </div>
+
+                <div class="info_txt_bag">
+                    <h2>Lista de Contatos Emergenciais Impressa:</h2>
+                    <p>Inclua uma lista de contatos essenciais impressa e laminada na sua mochila de emergência.
+                        Certifique-se de ter números de emergência locais, como polícia, bombeiros e serviços médicos de
+                        pronto-socorro. Além disso, adicione contatos de familiares próximos ou amigos confiáveis que
+                        possam oferecer apoio em situações de crise.</p>
+
+                    <h2>Informações Médicas Cruciais:</h2>
+                    <p>Junto com os contatos de emergência, tenha informações médicas cruciais prontamente disponíveis.
+                        Isso pode incluir alergias, condições médicas pré-existentes, medicamentos prescritos e
+                        informações de contato do seu médico. Esses detalhes podem ser vitais para profissionais de
+                        saúde em casos de emergência médica.</p>
+
+                    <h2>Contatos de Apoio e Recursos Comunitários:</h2>
+                    <p>Além dos contatos de emergência direta, considere incluir contatos de organizações de apoio
+                        comunitário, abrigos locais, centros de ajuda humanitária e outros recursos disponíveis em sua
+                        região. Esses contatos podem oferecer assistência adicional em momentos de crise e podem ser
+                        cruciais para garantir seu bem-estar e segurança.</p>
+
+                    <h2> Informações de Seguro e Documentos Relevantes:</h2>
+                    <p>Em situações de desastre, ter acesso rápido a informações de seguro e outros documentos
+                        relevantes é crucial. Mantenha cópias dos seus documentos de seguro de saúde, apólices de seguro
+                        residencial, identificação pessoal e outros documentos essenciais na sua mochila de emergência,
+                        garantindo assim que você possa acessar essas informações quando necessário.</p>
+
+                    <h2> Informações de Contato Adicionais:</h2>
+                    <p>Considere incluir informações de contato de entes queridos que possam estar em locais diferentes.
+                        Ter essas informações à mão pode ajudar a estabelecer comunicação e assegurar que todos estejam
+                        cientes da sua situação e segurança.</p>
+                    <p>Manter seus contatos cruciais sempre à mão em sua mochila de emergência é uma prática prudente
+                        que pode proporcionar tranquilidade em momentos de incerteza. Certifique-se de revisar e
+                        atualizar regularmente as informações de contato para garantir que sua mochila de emergência
+                        esteja sempre pronta para qualquer situação imprevista.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contêiner para adicionar novos itens -->
+        <div class="add-item-container" id="add-item-container">
+            <!-- Ícone para fechar o contêiner -->
+            <i class="fas fa-times" id="close-button" onclick="closeAddItens()"></i>
+            <h3>Adicionar Novo Item</h3>
+            <form action="adicionar_item.php" method="post">
+                <!-- Campos de entrada para nome do item, data de validade, quantidade e botão para adicionar -->
+                <input class="input_add" type="text" name="nome_item" required placeholder="Nome">
+                <input class="input_add" type="date" name="data_validade" placeholder="Data de Validade">
+                <input class="input_add" type="text" name="status" placeholder="Quantidade">
+                <input id="btn_add" type="submit" value="Adicionar Item">
+            </form>
+        </div>
+
+        <!-- Barra flutuante com ícones -->
+        <div class="floating-bar">
+            <!-- Ícone de "Home" com um link para a página "home.html" -->
+            <a href="./home.php"><i class="fas fa-home"></i></a>
+            <!-- Ícone de "Lista de Itens" com um link para a página "lista_itens.php" -->
+            <a href="./lista_itens.php"><i class="fa-solid fa-list"></i></a>
+            <!-- Ícone para mostrar o contêiner de adição de itens com uma função JavaScript associada "hideAddItens()" -->
+            <i class="fas fa-plus" id="add-item-button" onclick="hideAddItens()"></i>
+            <!-- Ícone de "Informações" com um link para a página "infos.html" -->
+            <a href="./infos.html"><i class="fa-solid fa-info"></i></a>
+            <!-- Ícone de "Usuário" (perfil do usuário) -->
+            <a href="./user.html"><i class="fas fa-user"></i></a>
+        </div>
+
+    </section>
+</body>
+
+</html>
